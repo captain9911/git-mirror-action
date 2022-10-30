@@ -13,8 +13,8 @@ echo "SOURCE=$SOURCE_REPO"
 echo "DESTINATION=$DESTINATION_REPO"
 echo "DRY RUN=$DRY_RUN"
 
-# git clone --depth 1 --branch master --mirror "$SOURCE_REPO" "$SOURCE_DIR" && cd "$SOURCE_DIR"
-git clone --depth 1 --branch master "$SOURCE_REPO" "$SOURCE_DIR" && cd "$SOURCE_DIR"
+git clone --depth 1 --branch master --mirror "$SOURCE_REPO" "$SOURCE_DIR" && cd "$SOURCE_DIR"
+# git clone --depth 1 --branch master "$SOURCE_REPO" "$SOURCE_DIR" && cd "$SOURCE_DIR"
 git remote set-url --push origin "$DESTINATION_REPO"
 git fetch -p origin
 # Exclude refs created by GitHub for pull request.
